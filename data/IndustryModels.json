@@ -1,0 +1,136 @@
+{
+  "industry": [
+    {
+      "id": "1",
+      "name": "Automotive"
+    },
+    {
+      "id": "2",
+      "name": "Industrial Equipment Tooling"
+    },
+    {
+      "id": "3",
+      "name": "Energy-Oli & Gas"
+    },
+    {
+      "id": "4",
+      "name": "Aaronautics"
+    },
+    {
+      "id": "5",
+      "name": "Space"
+    }
+  ],
+  "models": [
+    {
+      "id": "1",
+      "industryid": "1",
+      "name": "External Mirror"
+    },
+    {
+      "id": "2",
+      "industryid": "1",
+      "name": "Gershift"
+    },
+    {
+      "id": "3",
+      "industryid": "1",
+      "name": "MotorCycle Fairing"
+    },
+    {
+      "id": "4",
+      "industryid": "1",
+      "name": "Rim"
+    },
+    {
+      "id": "5",
+      "industryid": "1",
+      "name": "Frontal Panel"
+    },
+    {
+      "id": "6",
+      "industryid": "1",
+      "name": "Engine Collector"
+    },
+    {
+      "id": "7",
+      "industryid": "2",
+      "name": "Robotic Arm"
+    },
+    {
+      "id": "8",
+      "industryid": "2",
+      "name": "Tooling"
+    },
+    {
+      "id": "9",
+      "industryid": "2",
+      "name": "Drilling Template"
+    },
+    {
+      "id": "10",
+      "industryid": "2",
+      "name": "Blister Mold"
+    },
+    {
+      "id": "11",
+      "industryid": "3",
+      "name": "Blade"
+    },
+    {
+      "id": "12",
+      "industryid": "3",
+      "name": "Heat Exchanger"
+    },
+    {
+      "id": "13",
+      "industryid": "3",
+      "name": "Lattice Gear"
+    },
+    {
+      "id": "14",
+      "industryid": "3",
+      "name": "Valve"
+    },
+    {
+      "id": "15",
+      "industryid": "4",
+      "name": "UAV"
+    },
+    {
+      "id": "16",
+      "industryid": "4",
+      "name": "Seat Support"
+    },
+    {
+      "id": "17",
+      "industryid": "4",
+      "name": "Bracket Fitting"
+    },
+    {
+      "id": "18",
+      "industryid": "4",
+      "name": "Organic Bracket Fitting"
+    },
+    {
+      "id": "19",
+      "industryid": "4",
+      "name": "Holicopter Instruments Fitting"
+    },
+    {
+      "id": "20",
+      "industryid": "5",
+      "name": "CUBESAT"
+    },
+    {
+      "id": "21",
+      "industryid": "5",
+      "name": "Solar Panel Support"
+    },
+    {
+      "id": "22",
+      "industryid": "5",
+      "name": "Tools"
+    }
+  ]
+}

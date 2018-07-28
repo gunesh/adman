@@ -1,0 +1,323 @@
+/*
+
+My Custom CSS
+=============
+
+Author:  Kiran Joshi
+Updated: April 2016
+
+*/
+
+
+/* --------------------------------------
+   Layout
+   -------------------------------------- */
+
+#features {
+    text-align: center;
+}
+
+#features img {
+    margin: 0 0 20px;
+}
+
+#inputMessage {
+    margin-bottom: 15px;
+}
+
+footer {
+    background: #333;
+    color: #eee;
+    font-size: 11px;
+    padding: 20px;
+}
+
+
+/* --------------------------------------
+   Typography
+   -------------------------------------- */
+
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+}
+
+.well .page-header {
+    margin-top: 0;
+}
+
+.well .page-header h1 {
+    margin-top: 0;
+}
+
+ul.unstyled {
+    list-style: none;
+    padding: 0;
+}
+
+
+/* --------------------------------------
+   Navbar
+   -------------------------------------- */
+
+#searchInput {
+    width: 170px;
+}
+
+.navbar-brand {
+    padding: 13px 15px;
+}
+.navbar-default{
+    background-color: #005F96;  
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: white;
+}
+.navbar{
+    margin-bottom: 0px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    border-color: #005F96 ! important;
+    border: 2px solid #ddd;
+    border-bottom: 0px;
+}
+
+.activenav{
+    background-color: #eee;
+}
+/* --------------------------------------
+   Carousel
+   -------------------------------------- */
+
+#myCarousel {
+    margin-top: 60px;
+}
+
+.carousel-caption {
+    font-size: 24px;
+}
+
+.carousel-caption h4 {
+    font-size: 32px;
+}
+
+#myCarousel .item { height: 400px; }
+
+#slide1 {
+    background: url('../../images/carousel_medium_01.jpg') top center no-repeat;
+}
+
+#slide2 {
+    background: url('../../images/carousel_medium_02.jpg') top center no-repeat;
+}
+
+#slide3 {
+    background: url('../../images/carousel_medium_03.jpg') top center no-repeat;
+}
+
+
+/* --------------------------------------
+   Global Styles
+   -------------------------------------- */
+
+.alert {
+    margin-top: 20px;
+    display: none;
+}
+
+.well {
+    margin: 20px 0;
+}
+
+.tabbable img.thumbnail {
+    margin: 0 20px 10px 0;
+}
+
+.thumbnails {
+    margin: 20px 0;
+}
+
+.thumbnail {
+    position: relative;
+}
+
+.thumbnail h3 {
+    font-size: 16px;
+    margin: 0 0 10px;
+    line-height: 20px;
+}
+
+.thumbnail .price {
+    font-size: 22px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 10px;
+}
+
+.thumbnail .price sup {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.thumbnail span.glyphicon {
+    margin-right: 5px;
+}
+
+
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+
+/* Portrait & landscape phone */
+@media (max-width: 480px) {
+
+    .thumbnail .price {
+        font-size: 14px;
+    }
+
+    .thumbnail .price sup {
+        font-size: 10px;
+    }
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+    #myCarousel .item { height: 310px; }
+
+    #slide1 {
+        background: url('../../images/carousel_small_01.jpg') top center no-repeat;
+    }
+
+    #slide2 {
+        background: url('../../images/carousel_small_02.jpg') top center no-repeat;
+    }
+
+    #slide3 {
+        background: url('../../images/carousel_small_03.jpg') top center no-repeat;
+    }
+
+    .carousel-caption {
+        font-size: 16px;
+    }
+
+    .carousel-caption h4 {
+        font-size: 22px;
+    }
+
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+    #myCarousel .item { height: 500px; }
+
+    #slide1 {
+        background: url('../../images/carousel_large_01.jpg') top center no-repeat;
+    }
+
+    #slide2 {
+        background: url('../../images/carousel_large_02.jpg') top center no-repeat;
+    }
+
+    #slide3 {
+        background: url('../../images/carousel_large_03.jpg') top center no-repeat;
+    }
+
+}
+
+
+
+/*steps builder css*/
+
+/*
+steps
+*/
+.wizard-builder-steps {
+    border-bottom: 5px solid #e9ecf3;
+    overflow: hidden;
+    background-color: #fff;
+}
+.wizard-builder-steps > div {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 180px;
+    padding-top: 14px;
+    /*text-transform: uppercase;*/
+    font-size: 16px;
+    height: 50px;
+    position: relative;
+    padding-left: 10px;
+    -webkit-transition: background 0.4s ease;
+    -moz-transition: background 0.4s ease;
+    -o-transition: background 0.4s ease;
+    transition: background 0.4s ease;
+}
+.wizard-builder-steps > div.active {
+    color: #fff;
+    background-color: #337ab7;
+    font-weight: bold;
+}
+.wizard-builder-steps > div:first-child + div {
+    padding-left: 25px;
+}
+.wizard-builder-steps > div.active:after {
+    border-left-color: #337ab7;
+}
+.wizard-builder-steps > div:after {
+    right: -52px;
+    top: -2px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-left-color: #fff;
+    border-width: 27px;
+    -webkit-transition: border 0.4s ease;
+    -moz-transition: border 0.4s ease;
+    -o-transition: border 0.4s ease;
+    transition: border 0.4s ease;
+}
+.wizard-builder-steps > div:before {
+    right: -54px;
+    top: -2px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-left-color: #e9ecf3;
+    border-width: 27px;
+    -webkit-transition: border 0.4s ease;
+    -moz-transition: border 0.4s ease;
+    -o-transition: border 0.4s ease;
+    transition: border 0.4s ease;
+}
+.wizard-builder-steps > div.past {
+    background-color: #9CC3E3;
+    color: #fff;
+}
+.wizard-builder-steps > div.past:before {
+	border-left-color: #fff;
+}
+.wizard-builder-steps > div.past:after {
+	border-left-color: #9CC3E3;
+}
+.wizard-builder-steps > div.active:before {
+	border-left-color: #fff;
+}
+.wizard-builder-steps > div.active:after {
+	border-left-color: #337ab7;
+}

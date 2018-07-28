@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html  ng-app="AdditiveManufacturing">
+    <head>
+        <title>Additive Manufacturing</title>
+        <!-- Mobile viewport optimized -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- Bootstrap CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-glyphicons.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+        <!-- Include Modernizr in the head, before any other Javascript -->
+        <script src="js/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body ng-controller="AdditiveManufacturing">
+        <div class="container-fluid" id="main">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#" style="background-color: white">
+                            <img alt="Atos" src="images/atos_logo.png" width="100" height="20"/>
+                        </a>
+                        <p class="navbar-text" style="color: white; font-weight: bold;font-size: 22px;margin-top:6px;margin-bottom: 6px;">Additive Manufacturing</p>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav  navbar-right">
+                            <li> <a href="#" ><span class="glyphicon glyphicon-globe"></span> <b>Help</b>  </a> </li>
+                            <li><form class="navbar-form" role="search">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Search in sites">
+                                    </div>
+                                    <button type="button" class="btn btn-default btn-sm">
+                                        <span class="glyphicon glyphicon-search"></span> Search 
+                                    </button>
+                                </form>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Sandeep Gawde <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Settings</a></li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#"><span class="glyphicon glyphicon-off"></span> Sign out</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+            <div class="row" style="background-color:#CFD8DC;margin-left: 0px;margin-right: 0px;font-weight: bold;">
+                <ul class="nav navbar-nav">
+                    <li  ng-class="{activenav : mainTab == 1}" ng-click="setMainTab(1)"><a href="javascript:void(0)"  >Home</a></li>
+                    <li ng-class="{activenav : mainTab == 2}" ng-click="setMainTab(2)"><a href="javascript:void(0)"  >Printing</a></li>
+                    <li ng-class="{activenav : mainTab == 3}" ng-click="setMainTab(3)"><a href="javascript:void(0)"  >Reports</a></li>
+                    <li  ng-class="{activenav : mainTab == 4}" ng-click="setMainTab(4)"><a href="javascript:void(0)" >Approval</a></li>
+                </ul>
+            </div>
+            <div  ng-if="mainTab == 1" class="row" style="margin-top: 40px;margin-left: 0px;margin-right: 0px;">
+                <div  ng-include="'html/home.html'"></div>
+            </div>
+            <div ng-if="mainTab == 2" class="row" style="margin-top: 40px;margin-left: 0px;margin-right: 0px;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wizard-builder-container">
+                            <h4 style="color:#005F96"><b>Process Details</b></h4>
+                            <div class="wizard-builder-box">
+                                <div class="wizard-builder-steps clearfix">
+                                    <div  ng-class="{active : tab == 1,past:tab > 1}" ng-style="{'z-index' :tab == 1 ? 0 : 9 }" ng-click="setTabs(1)">3D Model Selection</div>
+                                    <div  ng-class="{active : tab == 2,past:tab > 2}" ng-style="{'z-index' :tab == 2 ? 0 : 8 }" ng-click="setTabs(2)">Customize Model</div>
+                                    <div  ng-class="{active : tab == 3,past:tab > 3}" ng-style="{'z-index' :tab == 3 ? 0 : 7 }" ng-click="setTabs(3)">Confirm Model</div>
+                                    <div  ng-class="{active : tab == 4,past:tab > 4}" ng-style="{'z-index' :tab == 4 ? 0 : 6 }" ng-click="setTabs(4)">Payment</div>
+                                    <div  ng-class="{active : tab == 5,past:tab > 5}" ng-style="{'z-index' :tab == 5 ? 0 : 5 }" ng-click="setTabs(5)">Printer Selection</div>
+                                    <div  ng-class="{active : tab == 6,past:tab > 6}" ng-style="{'z-index' :tab == 6 ? 0 : 4 }" ng-click="setTabs(6)">Print Status</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div ng-if="tab == 1" style="margin-top: 20px;margin-left: 0px;margin-right: 0px;" ng-include="'html/3DModelSelection.html'"></div>
+                </div>
+                <div style="clear: both"></div>
+                <div class="pull-left">
+                    <button class="btn btn-primary" ng-click="setBack()">Back</button>
+                </div>
+                <div class="pull-right">
+                    <button class="btn btn-primary" ng-click="setNext()">Next</button>
+                </div>
+            </div>
+
+            <!--            <div class="row" style="margin-top: 40px;margin-left: 0px;margin-right: 0px;">
+                            <div class="col-md-12">
+                                <div class="tabbable">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tab1" data-toggle="tab">Industry Section</a></li>
+                                        <li><a href="#tab2" data-toggle="tab">Product Section</a></li>
+                                        <li><a href="#tab3" data-toggle="tab">Select Model</a></li>
+                                        <li><a href="#tab4" data-toggle="tab">Customize Model</a></li>
+                                        <li><a href="#tab5" data-toggle="tab">Confirm Model</a></li>
+                                        <li><a href="#tab6" data-toggle="tab">Payment</a></li>
+                                        <li><a href="#tab7" data-toggle="tab">Printer Selection</a></li>
+                                        <li><a href="#tab8" data-toggle="tab">Print Status</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab1">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        </div> end tab-pane 
+                                        <div class="tab-pane" id="tab2">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            <hr>
+                                        </div> end tab-pane 
+                                    </div> end tab-content 
+                                </div> end tabbable </div>
+                            <div class="col-md-2"></div>
+                        </div>-->
+        </div><!-- end container -->
+        <!-- First try for the online version of jQuery-->
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <!-- If no online access, fallback to our hardcoded version of jQuery -->
+        <script>window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
+        <!-- Bootstrap JS -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Custom JS -->
+        <script src="js/script.js"></script>
+        <script type="text/javascript" src="angular-js/lib1.5.3/angular.min.js"></script>
+        <script type="text/javascript" src="angular-js/lib1.5.3/angular-route.min.js"></script>
+        <script type="text/javascript" src="angular-js/app.js"></script>
+        <script type="text/javascript" src="angular-js/directives.js"></script>
+        <script type="text/javascript" src="angular-js/services.js"></script>
+        <script type="text/javascript" src="angular-js/filters.js"></script>
+        <script type="text/javascript" src="angular-js/controller.js"></script>
+    </body>
+</html>
+
